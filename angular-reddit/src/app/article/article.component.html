@@ -1,1 +1,18 @@
-<p>article works!</p>
+<div class="four wide column center aligned votes">
+    <div class=" ui statistic">
+        <div class="value">{{ article.votes }}</div>
+        <div class="label">Points</div>
+    </div>
+</div>
+<div class="twelve wide column">
+    <a href="{{ article.link }}" class="ui large header">{{ article.title }}</a>
+    <div class="met">({{ article.domain() }})</div>
+    <ul class="ui horizontal big list voters">
+        <li class="item"><a (click)="voteUp()">
+                <i class="arrow up icon"></i>upwote
+            </a></li>
+        <li class="item"><a (click)="voteDown()">
+                <i class="arrow down icon"></i>downvote
+            </a></li>
+    </ul>
+</div>
